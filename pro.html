@@ -216,6 +216,81 @@ footer .wrap{padding-block:18px;display:grid;gap:0}
 .foot-row{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px 20px}
 .foot-row a{text-decoration:none}
 .foot-row a:hover{text-decoration:underline}
+
+/* ---------- fiche technique ---------- */
+.tech{background:var(--paper);color:var(--ink)}
+.tech .sec-head p{color:#3d3f47}
+.tech .label{color:#5b5d66}
+.tech-nav{display:flex;flex-wrap:wrap;align-items:center;gap:8px 22px;padding-block:14px;border-block:2px solid var(--ink);margin-bottom:clamp(24px,3vw,36px)}
+.tech-nav a:not(.btn){font-family:var(--f-sub);font-weight:500;font-size:15px;letter-spacing:.25em;text-transform:uppercase;text-decoration:none}
+.tech-nav a:not(.btn):hover{color:var(--red)}
+.tech-nav .btn{margin-left:auto;border-color:var(--ink)}
+.tech-nav .btn:hover,.tech-cta .btn:hover{background:var(--ink);color:var(--yellow);border-color:var(--ink)}
+.tech-glance{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));border:2px solid var(--ink);background:#fff}
+.tech-glance div{display:grid;gap:4px;padding:16px;border-right:1px solid #26262626;align-content:start}
+.tech-glance div:last-child{border-right:0}
+.tech-glance b{font-family:var(--f-disp);font-weight:400;font-size:clamp(22px,2.2vw,30px);line-height:1.05;text-transform:uppercase}
+.tech-glance span:last-child{font-size:14px;color:#5b5d66}
+@media (max-width:980px){.tech-glance{grid-template-columns:repeat(3,minmax(0,1fr))}.tech-glance div:nth-child(3){border-right:0}.tech-glance div:nth-child(-n+3){border-bottom:1px solid #26262626}}
+@media (max-width:560px){.tech-glance{grid-template-columns:repeat(2,minmax(0,1fr))}.tech-glance div{border-right:1px solid #26262626!important;border-bottom:1px solid #26262626}.tech-glance div:nth-child(2n){border-right:0!important}}
+.tech-block{padding-top:clamp(48px,6vw,80px);scroll-margin-top:70px}
+.tech-block-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:12px 32px;margin-bottom:22px}
+.tech-block-head h3{font-size:clamp(34px,5vw,64px)}
+.tech-block-head p{max-width:52ch;color:#3d3f47}
+.plot-scroll,.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;border:2px solid var(--ink);background:#fff}
+.plot{display:block;width:100%;min-width:640px;height:auto;padding:12px}
+.legend{list-style:none;margin:14px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:10px 22px;font-size:14px}
+.legend li{display:flex;align-items:center;gap:8px}
+.legend i{display:inline-block;flex:none}
+.lg-dot{width:16px;height:16px;border-radius:50%;background:var(--red);border:2px solid var(--ink)}
+.lg-wedge{width:22px;height:12px;background:var(--yellow);border:2px solid var(--ink);clip-path:polygon(18% 0,82% 0,100% 100%,0 100%)}
+.lg-mic{width:6px;height:18px;background:var(--ink);border-radius:3px}
+.lg-pw{width:16px;height:16px;border-radius:3px;background:var(--red)}
+.lg-pedal{width:24px;height:14px;border:2px solid var(--ink);border-radius:3px;background:#fff}
+.lg-stand{width:0;height:0;border-left:9px solid transparent;border-right:9px solid transparent;border-bottom:16px solid var(--ink)}
+.lg-amp{width:24px;height:14px;background:var(--ink)}
+.lg-riser{width:24px;height:14px;border:2px dashed var(--ink);background:#99DAFF33}
+.voices{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:24px;border:2px solid var(--ink);background:#fff}
+.voices article{padding:16px;display:grid;gap:8px;align-content:start;border-right:1px solid #26262626}
+.voices article:last-child{border-right:0}
+.voices h4{font-size:clamp(24px,2.4vw,32px);display:flex;align-items:center;gap:10px}
+.voices h4 i{font-style:normal;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-size:17px;border:2px solid var(--ink);flex:none}
+.voices p{font-size:15px}
+@media (max-width:860px){.voices{grid-template-columns:repeat(2,minmax(0,1fr))}.voices article:nth-child(2){border-right:0}.voices article:nth-child(-n+2){border-bottom:1px solid #26262626}}
+@media (max-width:480px){.voices{grid-template-columns:1fr}.voices article{border-right:0!important;border-bottom:1px solid #26262626}}
+.tech-notes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:16px}
+.tech-notes.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.tech-notes>div{border:2px solid var(--ink);background:#fff;padding:16px;display:grid;gap:8px;align-content:start}
+.tech-notes .spec a{font-weight:600;word-break:break-all}
+@media (max-width:860px){.tech-notes,.tech-notes.three{grid-template-columns:1fr}}
+.gear,.configs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.configs{margin-top:28px}
+.gear-card{border:2px solid var(--ink);background:#fff;padding:clamp(16px,2vw,24px);display:grid;gap:10px;align-content:start}
+.gear-card.ours{background:var(--yellow)}
+.gear-card.ours .label{color:#4a4320}
+.gear-card h4{font-size:clamp(28px,3vw,40px)}
+.check{list-style:none;margin:0;padding:0;display:grid}
+.check li{display:grid;grid-template-columns:20px minmax(0,1fr);column-gap:12px;padding-block:10px;border-bottom:1px solid #26262626}
+.check li:last-child{border-bottom:0}
+.check li::before{content:"";width:16px;height:16px;border:2px solid var(--ink);margin-top:3px;grid-row:span 2;background:#fff}
+.gear-card.ours .check li::before{background:var(--yellow);box-shadow:inset 0 0 0 3px #fff}
+.check li span{font-size:14px;color:#4b4d55}
+@media (max-width:760px){.gear,.configs{grid-template-columns:1fr}}
+.ttable{width:100%;min-width:620px;border-collapse:collapse;font-size:15px}
+.ttable th{font-family:var(--f-sub);font-weight:500;font-size:13px;letter-spacing:.25em;text-transform:uppercase;text-align:left;padding:12px 14px;border-bottom:2px solid var(--ink);white-space:nowrap}
+.ttable td{padding:10px 14px;border-bottom:1px solid #26262622;vertical-align:top}
+.ttable tbody tr:last-child td{border-bottom:0}
+.ttable td.n{font-family:var(--f-disp);font-size:20px;line-height:1.1;width:1%;white-space:nowrap}
+.ttable td.c{text-align:center;width:1%}
+.ttable tr.grp td{background:#e6ebf2;font-family:var(--f-sub);font-size:13px;letter-spacing:.3em;text-transform:uppercase;padding-block:7px}
+.who{font-style:normal;font-family:var(--f-sub);font-size:12px;letter-spacing:.2em;text-transform:uppercase;background:var(--yellow);border:1px solid var(--ink);padding:1px 6px;margin-left:6px;white-space:nowrap}
+.who.lead{background:var(--red);color:#fff}
+i.must,i.want{display:inline-block;width:12px;height:12px;border-radius:50%;border:2px solid var(--ink);vertical-align:-1px}
+i.must{background:var(--ink)}
+.note.key{margin-top:10px}
+.tech-cta{margin-top:28px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;padding:18px clamp(16px,2vw,24px);background:var(--ink);color:var(--paper)}
+.tech-cta .btn:hover{background:var(--sky);color:var(--ink);border-color:var(--sky)}
+@media print{.top,footer,.tech-nav .btn,.tech-cta{display:none}}
 </style>
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -234,6 +309,7 @@ footer .wrap{padding-block:18px;display:grid;gap:0}
       <a href="index.html#dates">Dates</a>
       <a href="index.html#live" class="hide-m">Live</a>
       <a href="pro.html" class="hide-m" aria-current="page" style="color:var(--sky);opacity:1">Pro</a>
+      <a href="#technique" class="hide-m" data-en="Tech rider">Technique</a>
       <a href="#contact" class="hide-m">Booking</a>
       <button class="lang" id="lang" type="button" aria-label="Switch to English">EN</button>
       <a class="btn solid" href="https://linktr.ee/mondaysparks" target="_blank" rel="noopener" data-en="Listen">Écouter</a>
@@ -247,7 +323,7 @@ footer .wrap{padding-block:18px;display:grid;gap:0}
     <div class="wrap">
       <div class="sec-head">
         <h2 id="pro-t" class="wide" data-en="Press &amp; booking kit">Espace pro</h2>
-        <p data-en="For venues, festivals and media: a ready-to-copy bio, the live line-up and the press kit.">Pour les salles, les festivals et les médias : la bio prête à copier, la formation sur scène et le kit presse.</p>
+        <p data-en="For venues, festivals and media: a ready-to-copy bio, the press kit and the full tech rider.">Pour les salles, les festivals et les médias : la bio prête à copier, le kit presse et la fiche technique complète.</p>
       </div>
       <div class="pro-grid">
         <article class="pro-card">
@@ -262,11 +338,11 @@ footer .wrap{padding-block:18px;display:grid;gap:0}
           <h3 class="wide" data-en="Tech rider">Fiche technique</h3>
           <ul class="spec">
             <li><span class="label" data-en="Line-up">Formation</span><span data-en="4 musicians">4 musiciens</span></li>
-            <li><span class="label">Instruments</span><span data-en="Bass, 2 guitars, drums, synth">Basse, 2 guitares, batterie, synthé</span></li>
-            <li><span class="label" data-en="Vocals">Voix</span><span>Loïc (lead), Elias</span></li>
+            <li><span class="label">Instruments</span><span data-en="Bass, 2 guitars, drums">Basse, 2 guitares, batterie</span></li>
+            <li><span class="label" data-en="Vocals">Voix</span><span data-en="Loïc (lead), Rémi and Elias (backing)">Loïc (lead), Rémi et Elias (chœurs)</span></li>
             <li><span class="label">Set</span><span>Phoenix, Came Around, Rush, Guiness Time, Insane, Falling, Sparks</span></li>
           </ul>
-          <p class="note" data-en="Full tech rider and stage plot available on request.">Fiche technique détaillée et plan de scène envoyés sur demande.</p>
+          <a class="btn" href="#technique" data-en="See the full tech rider ↓">Voir la fiche technique ↓</a>
         </article>
         <article class="pro-card">
           <span class="label" data-en="Press kit">Kit presse</span>
@@ -276,10 +352,280 @@ footer .wrap{padding-block:18px;display:grid;gap:0}
             <li><a href="presse/monday-sparks-logo-rouge.svg" download><b data-en="Red logo">Logo rouge</b> <span>SVG ↓</span></a></li>
             <li><a href="presse/monday-sparks-logo-noir.svg" download><b data-en="Black logo">Logo noir</b> <span>SVG ↓</span></a></li>
             <li><a href="img/cover-rush.jpg" download="monday-sparks-rush.jpg"><b data-en="Rush cover">Pochette Rush</b> <span>JPG ↓</span></a></li>
+            <li><a href="presse/monday-sparks-rider-technique.pdf" download><b data-en="Tech rider">Rider technique</b> <span>PDF ↓</span></a></li>
             <li><a href="img/p4.jpg" download="monday-sparks-live-supersonic.jpg"><b data-en="Live photo, Supersonic">Photo live Supersonic</b> <span>JPG ↓</span></a></li>
           </ul>
           <p class="note" data-en="High-resolution photos and artwork available by email.">Photos et pochettes en haute définition sur demande par e-mail.</p>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="technique" class="tech sec band" aria-labelledby="tech-t">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <span class="label" data-en="Tech rider v2 · no synth">Rider v2 · sans synthé</span>
+          <h2 id="tech-t" class="wide" style="margin-top:10px" data-en="Tech rider">Fiche technique</h2>
+        </div>
+        <p data-en="Everything you need to prepare a show with us. It all adapts: we play bars with a light PA as well as fully equipped clubs. Something missing or unclear? Email us before the date and we will find a solution.">Tout ce qu'il faut pour préparer un concert avec nous. Tout est adaptable : on joue aussi bien en bar (sono légère) qu'en club équipé. Un doute, un manque ? Écrivez-nous avant la date, on trouve une solution.</p>
+      </div>
+
+      <nav class="tech-nav" aria-label="Fiche technique">
+        <a href="#plan" data-en="Stage plot">Plan de scène</a>
+        <a href="#materiel" data-en="Backline &amp; gear">Backline &amp; matériel</a>
+        <a href="#retours" data-en="Monitors">Retours</a>
+        <a href="#patch">Patch</a>
+        <a class="btn solid" href="presse/monday-sparks-rider-technique.pdf" download data-en="Download the PDF rider ↓">Télécharger le rider PDF ↓</a>
+      </nav>
+
+      <div class="tech-glance">
+        <div><span class="label" data-en="Line-up">Formation</span><b data-en="4 musicians">4 musiciens</b><span data-en="Bass/lead vocals, 2 guitars, drums">Basse/chant, 2 guitares, batterie</span></div>
+        <div><span class="label" data-en="Stage">Plateau</span><b>5 × 3 m</b><span data-en="Ideal size, adaptable">Idéal, adaptable</span></div>
+        <div><span class="label" data-en="Inputs">Entrées</span><b>14 in</b><span data-en="5 to 9 in a small venue">5 à 9 en petite salle</span></div>
+        <div><span class="label" data-en="Monitors">Retours</span><b>4 wedges</b><span data-en="2 circuits minimum">2 circuits minimum</span></div>
+        <div><span class="label" data-en="Power">Électricité</span><b data-en="7 points">7 points</b><span>230 V</span></div>
+        <div><span class="label" data-en="Timing">Déroulé</span><b>45 min – 1 h 30</b><span data-en="Setup ~15 min, soundcheck 30 min">Install ~15 min, balances 30 min</span></div>
+      </div>
+
+      <!-- Plan de scène -->
+      <div id="plan" class="tech-block">
+        <div class="tech-block-head">
+          <h3 class="wide" data-en="Stage plot">Plan de scène</h3>
+          <p data-en="Seen from the audience: audience at the bottom, house left (jardin) on the left, house right (cour) on the right.">Vu de la salle : public en bas, jardin à gauche, cour à droite.</p>
+        </div>
+        <div class="plot-scroll">
+          <svg class="plot" viewBox="0 0 1000 640" role="img" aria-labelledby="plot-title plot-desc">
+            <title id="plot-title">Plan de scène Monday Sparks</title>
+            <desc id="plot-desc">Au fond de scène, de jardin à cour : ampli guitare 1, ampli basse, batterie sur praticable optionnel avec le retour R4 côté cour, ampli guitare 2. Devant, de jardin à cour : Rémi guitare 1 avec retour R2, Loïc basse et chant lead au centre avec retour R1, Elias guitare 2 avec retour R3.</desc>
+            <defs>
+              <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#26262612" stroke-width="1"/></pattern>
+              <symbol id="pw" viewBox="0 0 22 22"><rect width="22" height="22" rx="3" fill="#FF3636"/><path d="M12.5 3.5 6 12.5h4.5l-1 6 6.5-9h-4.5z" fill="#fff"/></symbol>
+              <symbol id="stand" viewBox="0 0 24 24"><path d="M12 3 21 21H3z" fill="none" stroke="#262626" stroke-width="2.2" stroke-linejoin="round"/></symbol>
+              <symbol id="mic" viewBox="0 0 20 40"><circle cx="10" cy="5" r="4" fill="#262626"/><path d="M10 9v18" stroke="#262626" stroke-width="2.2"/><circle cx="10" cy="32" r="6" fill="#fff" stroke="#262626" stroke-width="2.2"/></symbol>
+            </defs>
+            <g font-family="Big Shoulders Display, Arial Narrow, sans-serif" fill="#262626">
+              <text x="500" y="30" text-anchor="middle" font-size="15" letter-spacing="6" data-en="UPSTAGE">LOINTAIN</text>
+              <text x="26" y="300" text-anchor="middle" font-size="15" letter-spacing="6" transform="rotate(-90 26 300)" data-en="HOUSE LEFT">JARDIN</text>
+              <text x="974" y="300" text-anchor="middle" font-size="15" letter-spacing="6" transform="rotate(90 974 300)" data-en="HOUSE RIGHT">COUR</text>
+            </g>
+            <rect x="60" y="48" width="880" height="500" fill="url(#grid)" stroke="#262626" stroke-width="4"/>
+
+            <!-- Fond de scène -->
+            <g font-family="Big Shoulders Display, Arial Narrow, sans-serif" font-size="13" letter-spacing="2" fill="#262626" text-anchor="middle">
+              <rect x="95" y="80" width="120" height="56" fill="#262626"/><rect x="105" y="90" width="100" height="36" fill="none" stroke="#5b5d66"/>
+              <use href="#pw" x="70" y="70" width="22" height="22"/>
+              <text x="155" y="156" data-en="GTR AMP 1">AMPLI GTR 1</text>
+              <use href="#stand" x="226" y="96" width="26" height="26"/>
+              <rect x="270" y="80" width="120" height="56" fill="#262626"/><rect x="280" y="90" width="100" height="36" fill="none" stroke="#5b5d66"/>
+              <use href="#pw" x="246" y="70" width="22" height="22"/>
+              <text x="330" y="156" data-en="BASS AMP">AMPLI BASSE</text>
+              <use href="#stand" x="310" y="180" width="26" height="26"/>
+
+              <rect x="410" y="66" width="200" height="176" fill="#99DAFF33" stroke="#262626" stroke-width="2" stroke-dasharray="6 5"/>
+              <text x="510" y="84" font-size="11" data-en="2×2 RISER (OPTIONAL)">PRATICABLE 2×2 (OPTION)</text>
+              <circle cx="448" cy="124" r="22" fill="#FFEB67" stroke="#262626" stroke-width="1.5" opacity=".75"/>
+              <circle cx="572" cy="124" r="26" fill="#FFEB67" stroke="#262626" stroke-width="1.5" opacity=".75"/>
+              <circle cx="510" cy="108" r="11" fill="#262626"/>
+              <circle cx="436" cy="170" r="14" fill="#FFEB67" stroke="#262626" stroke-width="1.5"/>
+              <circle cx="466" cy="182" r="16" fill="#fff" stroke="#262626" stroke-width="1.5"/>
+              <circle cx="490" cy="150" r="14" fill="#fff" stroke="#262626" stroke-width="1.5"/>
+              <circle cx="530" cy="150" r="14" fill="#fff" stroke="#262626" stroke-width="1.5"/>
+              <circle cx="566" cy="186" r="20" fill="#fff" stroke="#262626" stroke-width="1.5"/>
+              <rect x="489" y="178" width="42" height="34" fill="#262626"/><text x="510" y="200" fill="#fff" font-size="11">GC</text>
+              <circle cx="594" cy="226" r="13" fill="#3F239A"/><text x="594" y="231" fill="#fff" font-family="Anton, Impact, sans-serif" font-size="15">4</text>
+              <text x="510" y="262" font-family="Anton, Impact, sans-serif" font-size="17" letter-spacing="1" data-en="CLÉMENT · DRUMS">CLÉMENT · BATTERIE</text>
+
+              <path d="M628 118 652 106V186L628 174Z" fill="#FFEB67" stroke="#262626" stroke-width="2"/>
+              <text x="672" y="152" font-family="Anton, Impact, sans-serif" font-size="15">R4</text>
+
+              <use href="#stand" x="716" y="96" width="26" height="26"/>
+              <rect x="785" y="80" width="120" height="56" fill="#262626"/><rect x="795" y="90" width="100" height="36" fill="none" stroke="#5b5d66"/>
+              <use href="#pw" x="908" y="70" width="22" height="22"/>
+              <text x="845" y="156" data-en="GTR AMP 2">AMPLI GTR 2</text>
+            </g>
+
+            <!-- Avant-scène -->
+            <g font-family="Anton, Impact, sans-serif" text-anchor="middle" fill="#262626">
+              <text x="225" y="300" font-size="19" data-en="RÉMI · GUITAR 1">RÉMI · GUITARE 1</text>
+              <circle cx="225" cy="348" r="34" fill="#99DAFF" stroke="#262626" stroke-width="3"/><text x="225" y="360" font-size="32">2</text>
+              <text x="500" y="306" font-size="19" data-en="LOÏC · BASS · VOCALS">LOÏC · BASSE · CHANT</text>
+              <circle cx="500" cy="360" r="40" fill="#FF3636" stroke="#262626" stroke-width="3"/><text x="500" y="374" font-size="38" fill="#fff">1</text>
+              <text x="775" y="300" font-size="19" data-en="ELIAS · GUITAR 2">ELIAS · GUITARE 2</text>
+              <circle cx="775" cy="348" r="34" fill="#99DAFF" stroke="#262626" stroke-width="3"/><text x="775" y="360" font-size="32">3</text>
+            </g>
+            <use href="#mic" x="215" y="388" width="20" height="40"/>
+            <use href="#mic" x="490" y="408" width="20" height="40"/>
+            <use href="#mic" x="765" y="388" width="20" height="40"/>
+            <g font-family="Archivo, Arial, sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#262626">
+              <rect x="260" y="400" width="74" height="26" rx="4" fill="#fff" stroke="#262626" stroke-width="2"/><text x="297" y="417" data-en="PEDALS">PÉDALES</text>
+              <use href="#pw" x="340" y="402" width="22" height="22"/>
+              <rect x="540" y="404" width="74" height="26" rx="4" fill="#fff" stroke="#262626" stroke-width="2"/><text x="577" y="421" data-en="PEDALS">PÉDALES</text>
+              <use href="#pw" x="620" y="406" width="22" height="22"/>
+              <rect x="540" y="438" width="96" height="26" rx="4" fill="#fff" stroke="#262626" stroke-width="2"/><text x="588" y="455" data-en="VOCAL PEDAL">PÉDALE VOIX</text>
+              <use href="#pw" x="642" y="440" width="22" height="22"/>
+              <rect x="810" y="400" width="74" height="26" rx="4" fill="#fff" stroke="#262626" stroke-width="2"/><text x="847" y="417" data-en="PEDALS">PÉDALES</text>
+              <use href="#pw" x="890" y="402" width="22" height="22"/>
+            </g>
+            <g font-family="Anton, Impact, sans-serif" font-size="15" fill="#262626">
+              <path d="M198 490H252L262 514H188Z" fill="#FFEB67" stroke="#262626" stroke-width="2"/><text x="272" y="512">R2</text>
+              <path d="M473 496H527L537 520H463Z" fill="#FFEB67" stroke="#262626" stroke-width="2"/><text x="547" y="518">R1</text>
+              <path d="M748 490H802L812 514H738Z" fill="#FFEB67" stroke="#262626" stroke-width="2"/><text x="822" y="512">R3</text>
+            </g>
+
+            <!-- Public -->
+            <path d="M270 594H320M680 594H730" stroke="#262626" stroke-width="3"/>
+            <rect x="335" y="574" width="330" height="40" fill="#262626"/>
+            <text x="500" y="601" text-anchor="middle" fill="#F5F7FA" font-family="Anton, Impact, sans-serif" font-size="19" letter-spacing="4" data-en="AUDIENCE · FRONT">PUBLIC · FACE</text>
+            <text x="940" y="600" text-anchor="end" fill="#262626" font-family="Big Shoulders Display, Arial Narrow, sans-serif" font-size="12" letter-spacing="3" data-en="FOH IN THE ROOM">FOH EN SALLE</text>
+          </svg>
+        </div>
+        <ul class="legend">
+          <li><i class="lg-dot"></i><span data-en="Musician (no. = vocal channel)">Musicien (n° = voix)</span></li>
+          <li><i class="lg-wedge"></i><span data-en="Monitor wedge">Retour de scène</span></li>
+          <li><i class="lg-mic"></i><span data-en="Boom stand + vocal mic">Pied perche + micro chant</span></li>
+          <li><i class="lg-pw"></i><span data-en="230 V power">Alimentation 230 V</span></li>
+          <li><i class="lg-pedal"></i><span data-en="Pedalboard">Pedalboard</span></li>
+          <li><i class="lg-stand"></i><span data-en="Guitar / bass stand">Stand guitare / basse</span></li>
+          <li><i class="lg-amp"></i><span data-en="Amp (venue backline)">Ampli (backline salle)</span></li>
+          <li><i class="lg-riser"></i><span data-en="Riser (if available)">Praticable (si dispo)</span></li>
+        </ul>
+
+        <div class="voices">
+          <article><span class="label" data-en="Vocal 1">Voix 1</span><h4 class="wide"><i style="background:var(--red);color:#fff">1</i> Loïc</h4><p data-en="Bass and lead vocals. HX Stomp via jack into the bass amp, vocal pedal on XLR.">Basse et chant lead. HX Stomp en jack dans l'ampli basse, pédale voix en XLR.</p></article>
+          <article><span class="label" data-en="Vocal 2">Voix 2</span><h4 class="wide"><i style="background:var(--sky)">2</i> Rémi</h4><p data-en="Guitar 1 and backing vocals. 3 pedals, venue amp miked.">Guitare 1 et chœurs. 3 pédales, ampli salle repris au micro.</p></article>
+          <article><span class="label" data-en="Vocal 3">Voix 3</span><h4 class="wide"><i style="background:var(--sky)">3</i> Elias</h4><p data-en="Guitar 2 and backing vocals. Pedals, venue amp miked.">Guitare 2 et chœurs. Pédales, ampli salle repris au micro.</p></article>
+          <article><span class="label" data-en="Drums">Batterie</span><h4 class="wide"><i style="background:var(--violet);color:#fff">4</i> Clément</h4><p data-en="3-tom kit provided by the venue. Brings his own cymbals and kick pedal.">Kit 3 toms fourni par la salle. Cymbales et pédale de grosse caisse apportées.</p></article>
+        </div>
+
+        <div class="tech-notes">
+          <div><span class="label" data-en="Key points">À retenir</span><p data-en-html="Lead vocals &lt;b&gt;in the centre&lt;/b&gt;, downstage. Bass taken from the amp's DI output (or a mic on the cab).">Chant lead <b>au centre</b>, à l'avant-scène. Basse reprise via la sortie DI de l'ampli (ou micro sur le baffle).</p></div>
+          <div><span class="label" data-en="Stage">Plateau</span><p data-en="Adapts to the room layout, ideally 5 × 3 m. A drum riser is welcome but not essential.">Adaptable suivant la disposition de la salle, idéal 5 × 3 m. Praticable batterie bienvenu mais pas indispensable.</p></div>
+        </div>
+      </div>
+
+      <!-- Backline / matériel -->
+      <div id="materiel" class="tech-block">
+        <div class="tech-block-head">
+          <h3 class="wide" data-en="Backline &amp; gear">Backline &amp; matériel</h3>
+          <p data-en="What we need from the venue, and what we bring.">Ce qu'on attend de la salle, et ce qu'on apporte.</p>
+        </div>
+        <div class="gear">
+          <article class="gear-card">
+            <span class="label" data-en="Provided by the venue">Fourni par la salle</span>
+            <h4 class="wide">Backline</h4>
+            <ul class="check">
+              <li><b data-en="Full drum kit">Batterie complète</b><span data-en="Kick, snare, 3 toms, hi-hat stand, 2 cymbal boom stands, stool, rug">Grosse caisse, caisse claire, 3 toms, pied de charley, 2 pieds perche cymbale, tabouret, tapis</span></li>
+              <li><b data-en="1 bass amp">1 ampli basse</b><span data-en="Head + cab or combo, ≥ 300 W (Ampeg, Markbass, Orange type)">Tête + baffle ou combo, ≥ 300 W (type Ampeg, Markbass, Orange)</span></li>
+              <li><b data-en="2 guitar amps">2 amplis guitare</b><span data-en="Fender Twin, Vox AC30, Marshall JCM type">Type Fender Twin, Vox AC30, Marshall JCM</span></li>
+              <li><b data-en="3 boom mic stands">3 pieds de micro perche</b></li>
+              <li><b data-en="3 guitar / bass stands">3 stands guitare / basse</b></li>
+            </ul>
+          </article>
+          <article class="gear-card ours">
+            <span class="label" data-en="Brought by the band">Apporté par le groupe</span>
+            <h4 class="wide" data-en="Gear">Matériel</h4>
+            <ul class="check">
+              <li><b data-en="Cymbals + kick pedal">Cymbales + pédale de grosse caisse</b></li>
+              <li><b data-en="Bass + Line 6 HX Stomp">Basse + Line 6 HX Stomp</b><span data-en="Via jack into the venue's bass amp">En jack dans l'ampli basse de la salle</span></li>
+              <li><b data-en="2 guitars + pedalboards">2 guitares + pedalboards</b><span data-en="Rémi: 3 pedals">Rémi : 3 pédales</span></li>
+              <li><b data-en="Lead vocal mic + vocal effects pedal">Micro chant lead + pédale d'effet voix</b><span data-en="XLR in / XLR out, 230 V powered">XLR in / XLR out, alimentée en 230 V</span></li>
+              <li><b data-en="Instrument jack cables, power strips for pedalboards">Câbles jack instruments, multiprises pedalboards</b></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+
+      <!-- Retours -->
+      <div id="retours" class="tech-block">
+        <div class="tech-block-head">
+          <h3 class="wide" data-en="Monitors">Retours de scène</h3>
+          <p data-en="4 powered wedges, ideally 4 separate circuits. With only 2 circuits: R1 + R4 / R2 + R3. Mixes fine-tuned at soundcheck.">4 wedges amplifiés, idéalement 4 circuits séparés. Avec 2 circuits seulement : R1 + R4 / R2 + R3. Mixes affinés aux balances.</p>
+        </div>
+        <div class="table-scroll">
+          <table class="ttable">
+            <thead><tr><th>Circuit</th><th data-en="For">Pour</th><th data-en="Position">Position</th><th data-en="Starting mix">Mix de départ</th></tr></thead>
+            <tbody>
+              <tr><td class="n">R1</td><td><b>Loïc</b> <span data-en="· bass, lead vocals">· basse, chant lead</span></td><td data-en="Centre, downstage">Centre avant</td><td data-en="Lead vocal +++, backing vocals, guitars, kick">Voix lead +++, chœurs, guitares, grosse caisse</td></tr>
+              <tr><td class="n">R2</td><td><b>Rémi</b> <span data-en="· guitar 1, backing vocals">· guitare 1, chœurs</span></td><td data-en="House left, downstage">Jardin avant</td><td data-en="Lead vocal, his vocal, guitar 2">Voix lead, sa voix, guitare 2</td></tr>
+              <tr><td class="n">R3</td><td><b>Elias</b> <span data-en="· guitar 2, backing vocals">· guitare 2, chœurs</span></td><td data-en="House right, downstage">Cour avant</td><td data-en="Lead vocal, his vocal, guitar 1, bass">Voix lead, sa voix, guitare 1, basse</td></tr>
+              <tr><td class="n">R4</td><td><b>Clément</b> <span data-en="· drums">· batterie</span></td><td data-en="House-right side of the kit">Côté cour du kit</td><td data-en="Bass, lead vocal, guitars">Basse, voix lead, guitares</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="tech-notes three">
+          <div><span class="label" data-en="Power">Électricité</span>
+            <ul class="spec">
+              <li><span class="label">230 V</span><span data-en-html="&lt;b&gt;7 points&lt;/b&gt; marked on the plot"><b>7 points</b> repérés sur le plan</span></li>
+              <li><span class="label" data-en="Upstage">Lointain</span><span data-en="3 amps">3 amplis</span></li>
+              <li><span class="label" data-en="On the floor">Au sol</span><span data-en="Pedalboards ×3, vocal pedal">Pedalboards ×3, pédale voix</span></li>
+            </ul>
+          </div>
+          <div><span class="label" data-en="Timing">Déroulé</span>
+            <ul class="spec">
+              <li><span class="label" data-en="Setup">Install</span><span>~15 min</span></li>
+              <li><span class="label" data-en="Soundcheck">Balances</span><span data-en="30 min if possible">30 min souhaitées</span></li>
+              <li><span class="label">Set</span><span data-en="45 min to 1 h 30">45 min à 1 h 30</span></li>
+            </ul>
+          </div>
+          <div><span class="label" data-en="Tech contact">Contact technique</span>
+            <ul class="spec">
+              <li><span class="label">Mail</span><a href="mailto:monday-sparks@outlook.fr">monday-sparks@outlook.fr</a></li>
+              <li><span class="label">Insta</span><a href="https://www.instagram.com/mondaysparks/" target="_blank" rel="noopener">@mondaysparks</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Patch -->
+      <div id="patch" class="tech-block">
+        <div class="tech-block-head">
+          <h3 class="wide" data-en="Patch · input list">Patch · entrées console</h3>
+          <p data-en="Indicative input list for a full PA. In a small venue, the “Bar setup” column shows the minimum we need to sound good.">Liste d'entrées indicative pour une sonorisation complète. En petite salle, la colonne « Config bar » indique le minimum qui nous permet de bien sonner.</p>
+        </div>
+        <div class="table-scroll">
+          <table class="ttable patch">
+            <thead><tr><th>#</th><th>Source</th><th data-en="Suggested mic / DI">Micro / DI suggéré</th><th data-en="Stand">Pied</th><th data-en="Bar setup">Config bar</th></tr></thead>
+            <tbody>
+              <tr class="grp"><td colspan="5" data-en="Drums · Clément">Batterie · Clément</td></tr>
+              <tr><td class="n">1</td><td data-en="Kick">Grosse caisse</td><td>Beta 52 / e902 / D112</td><td data-en="Short">Petit</td><td class="c"><i class="must" title="indispensable"></i></td></tr>
+              <tr><td class="n">2</td><td data-en="Snare">Caisse claire</td><td>SM57</td><td data-en="Short">Petit</td><td class="c"><i class="want" title="souhaité"></i></td></tr>
+              <tr><td class="n">3</td><td data-en="Hi-hat">Charley</td><td data-en="Condenser (SM81 / C451)">Statique (SM81 / C451)</td><td data-en="Short">Petit</td><td class="c"></td></tr>
+              <tr><td class="n">4</td><td>Tom 1</td><td>e604 / Beta 98 (clip)</td><td>—</td><td class="c"></td></tr>
+              <tr><td class="n">5</td><td>Tom 2</td><td>e604 / Beta 98 (clip)</td><td>—</td><td class="c"></td></tr>
+              <tr><td class="n">6</td><td data-en="Floor tom">Tom basse</td><td>e604 / Beta 98 (clip)</td><td>—</td><td class="c"></td></tr>
+              <tr><td class="n">7</td><td data-en="Overhead house left">Overhead jardin</td><td data-en="Condenser">Statique</td><td data-en="Tall">Grand</td><td class="c"><i class="want" title="souhaité"></i></td></tr>
+              <tr><td class="n">8</td><td data-en="Overhead house right">Overhead cour</td><td data-en="Condenser">Statique</td><td data-en="Tall">Grand</td><td class="c"></td></tr>
+              <tr class="grp"><td colspan="5">Instruments</td></tr>
+              <tr><td class="n">9</td><td><span data-en="Bass">Basse</span> <em class="who">Loïc</em></td><td data-en="Amp DI XLR out (or Beta 52 / RE20 on the cab)">Sortie DI XLR de l'ampli (ou Beta 52 / RE20 sur baffle)</td><td data-en="— / Short">— / Petit</td><td class="c"><i class="must" title="indispensable"></i></td></tr>
+              <tr><td class="n">10</td><td><span data-en="Guitar 1">Guitare 1</span> <em class="who">Rémi</em></td><td data-en="SM57 / e906 on amp">SM57 / e906 sur ampli</td><td data-en="Short">Petit</td><td class="c"><i class="want" title="souhaité"></i></td></tr>
+              <tr><td class="n">11</td><td><span data-en="Guitar 2">Guitare 2</span> <em class="who">Elias</em></td><td data-en="SM57 / e906 on amp">SM57 / e906 sur ampli</td><td data-en="Short">Petit</td><td class="c"><i class="want" title="souhaité"></i></td></tr>
+              <tr class="grp"><td colspan="5" data-en="Vocals">Voix</td></tr>
+              <tr><td class="n">12</td><td><span data-en="Lead vocal">Voix lead</span> <em class="who lead">Loïc</em></td><td data-en="SM58 / Beta 58 → vocal pedal (XLR in/out) → desk">SM58 / Beta 58 → pédale voix (XLR in/out) → console</td><td data-en="Boom">Perche</td><td class="c"><i class="must" title="indispensable"></i></td></tr>
+              <tr><td class="n">13</td><td><span data-en="Backing vocal">Chœurs</span> <em class="who">Rémi</em></td><td>SM58</td><td data-en="Boom">Perche</td><td class="c"><i class="must" title="indispensable"></i></td></tr>
+              <tr><td class="n">14</td><td><span data-en="Backing vocal">Chœurs</span> <em class="who">Elias</em></td><td>SM58</td><td data-en="Boom">Perche</td><td class="c"><i class="must" title="indispensable"></i></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="note key" data-en-html="&lt;i class=&quot;must&quot;&gt;&lt;/i&gt; essential · &lt;i class=&quot;want&quot;&gt;&lt;/i&gt; wanted · empty = nice to have"><i class="must"></i> indispensable · <i class="want"></i> souhaité · vide = confort</p>
+
+        <div class="configs">
+          <article class="gear-card">
+            <span class="label" data-en="Full setup">Config complète</span>
+            <h4 class="wide">Club / festival</h4>
+            <p data-en="14 inputs, fully miked drums, 4 monitor circuits. Desk with at least 4 pre-fader auxes.">14 entrées, batterie entièrement reprise, 4 circuits de retours. Console avec au moins 4 aux. pré-fader.</p>
+          </article>
+          <article class="gear-card ours">
+            <span class="label" data-en="Reduced setup">Config réduite</span>
+            <h4 class="wide" data-en="Bar / small venue">Bar / petite salle</h4>
+            <p data-en="5 to 9 inputs: kick, bass (amp DI), 3 vocals, plus snare and guitars if possible. 2 monitor circuits minimum.">5 à 9 entrées : grosse caisse, basse (DI ampli), 3 voix, + caisse claire et guitares si possible. 2 circuits de retours minimum.</p>
+          </article>
+        </div>
+
+        <div class="tech-cta">
+          <p data-en="Printable version to send to your sound engineer.">Version imprimable à transmettre à votre régisseur.</p>
+          <a class="btn solid" href="presse/monday-sparks-rider-technique.pdf" download data-en="Download the PDF rider (3 pages) ↓">Télécharger le rider PDF (3 pages) ↓</a>
+        </div>
       </div>
     </div>
   </section>
