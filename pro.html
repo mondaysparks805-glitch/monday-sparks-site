@@ -219,6 +219,10 @@ footer .wrap{padding-block:18px;display:grid;gap:0}
 
 /* ---------- fiche technique ---------- */
 .tech{background:var(--paper);color:var(--ink)}
+.tech[hidden]{display:none}
+#tech-toggle .t-close,#tech-toggle[aria-expanded="true"] .t-open{display:none}
+#tech-toggle[aria-expanded="true"] .t-close{display:inline}
+@media (prefers-reduced-motion:no-preference){.tech:not([hidden]){animation:techin .45s cubic-bezier(.2,.8,.2,1)}@keyframes techin{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}}
 .tech .sec-head p{color:#3d3f47}
 .tech .label{color:#5b5d66}
 .tech-nav{display:flex;flex-wrap:wrap;align-items:center;gap:8px 22px;padding-block:14px;border-block:2px solid var(--ink);margin-bottom:clamp(24px,3vw,36px)}
@@ -341,7 +345,7 @@ i.must{background:var(--ink)}
             <li><span class="label">Instruments</span><span data-en="Bass, 2 guitars, drums">Basse, 2 guitares, batterie</span></li>
             <li><span class="label" data-en="Vocals">Voix</span><span data-en="Loïc (lead), Rémi and Elias (backing)">Loïc (lead), Rémi et Elias (chœurs)</span></li>
           </ul>
-          <a class="btn" href="#technique" data-en="See the full tech rider ↓">Voir la fiche technique ↓</a>
+          <button class="btn" type="button" id="tech-toggle" aria-controls="technique" aria-expanded="false"><span class="t-open" data-en="See the tech rider ↓">Voir la fiche ↓</span><span class="t-close" data-en="Hide the tech rider ↑">Masquer la fiche ↑</span></button>
         </article>
         <article class="pro-card">
           <span class="label" data-en="Press kit">Kit presse</span>
@@ -360,7 +364,7 @@ i.must{background:var(--ink)}
     </div>
   </section>
 
-  <section id="technique" class="tech sec band" aria-labelledby="tech-t">
+  <section id="technique" class="tech sec band" aria-labelledby="tech-t" hidden>
     <div class="wrap">
       <div class="sec-head">
         <div>
@@ -692,6 +696,14 @@ i.must{background:var(--ink)}
     s.addEventListener('mouseenter',on); s.addEventListener('focus',on);
     s.addEventListener('mouseleave',function(){delete mus.dataset.tone;}); s.addEventListener('blur',function(){delete mus.dataset.tone;});
   });
+  // fiche technique : affichée au clic
+  var ts=document.getElementById('technique'), tb=document.getElementById('tech-toggle');
+  function openTech(scroll){ if(!ts) return; ts.hidden=false; if(tb) tb.setAttribute('aria-expanded','true'); if(scroll) ts.scrollIntoView({behavior:'smooth',block:'start'}); }
+  function closeTech(){ ts.hidden=true; tb.setAttribute('aria-expanded','false'); tb.scrollIntoView({behavior:'smooth',block:'center'}); }
+  if(tb) tb.addEventListener('click',function(){ ts.hidden ? openTech(true) : closeTech(); });
+  document.querySelectorAll('a[href="#technique"],.tech-nav a[href^="#"]').forEach(function(a){ a.addEventListener('click',function(){ openTech(false); }); });
+  function fromHash(){ var h=location.hash; if(h && ts && (h==='#technique' || ts.querySelector(h))){ openTech(false); var t=document.querySelector(h); if(t) setTimeout(function(){t.scrollIntoView();},0); } }
+  fromHash(); window.addEventListener('hashchange',fromHash);
   // copy bio
   var cb=document.getElementById('copy-bio'), bo=document.getElementById('bio-copied'), bt=document.getElementById('bio-short');
   if(cb) cb.addEventListener('click',function(){
