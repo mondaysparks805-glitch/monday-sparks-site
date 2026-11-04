@@ -132,14 +132,15 @@ p{margin:0}
 
 /* ---------- next single ---------- */
 .next-band{background:var(--night);padding-block:clamp(20px,3vw,36px)}
-.next{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:clamp(18px,3vw,40px);background:var(--yellow);color:var(--ink);padding:clamp(18px,2.6vw,28px)}
-.next-disc{width:clamp(72px,9vw,112px);aspect-ratio:1/1;border-radius:50%;background:radial-gradient(circle,var(--yellow) 0 13%,var(--ink) 14% 16%,#2c2c2c 17%,var(--ink) 40%,#333 41%,var(--ink) 60%,#2e2e2e 61%,var(--ink) 100%)}
-@media (prefers-reduced-motion:no-preference){.next-disc{animation:spin 6s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}}
+.next{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:clamp(18px,3vw,40px);background:var(--yellow);color:var(--ink);padding:clamp(18px,2.6vw,28px)}
 .next h3{font-size:clamp(28px,4vw,52px)}
 .next p{max-width:52ch;margin-top:8px;font-size:clamp(17px,1.6vw,21px);font-weight:600}
 .next .btn{border-color:var(--ink)}
 .next .btn:hover{background:var(--ink);color:var(--yellow)}
-@media (max-width:700px){.next{grid-template-columns:auto minmax(0,1fr)}.next .btn{grid-column:1/-1;justify-self:start}}
+.next-kicker{display:inline-flex;align-items:center;gap:8px;font-family:var(--f-disp);font-size:14px;letter-spacing:.12em;text-transform:uppercase;background:var(--ink);color:var(--yellow);padding:5px 12px 5px 10px;border-radius:999px;margin-bottom:10px}
+.next-kicker::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--red)}
+@media (prefers-reduced-motion:no-preference){.next-kicker::before{animation:blink 1.4s ease-in-out infinite}@keyframes blink{50%{opacity:.25}}}
+@media (max-width:700px){.next{grid-template-columns:1fr}.next .btn{justify-self:start}}
 
 /* ---------- pro / EPK ---------- */
 .pro{background:var(--sky);color:var(--ink)}
@@ -270,8 +271,8 @@ footer .wrap{padding-block:18px;display:grid;gap:0}
   <div class="next-band band">
     <div class="wrap">
       <div class="next">
-        <div class="next-disc" aria-hidden="true"></div>
         <div>
+          <span class="next-kicker" data-en="News">Actu</span>
           <h3 class="wide" data-en="Monday Sparks at the end of the year means:">Monday Sparks en fin d'année, ça va être :</h3>
           <p data-en="3 new singles, at least 2 live shows and several big announcements you need to follow!">3 nouveaux singles, minimum 2 lives et plusieurs annonces importantes que tu dois suivre !</p>
         </div>
