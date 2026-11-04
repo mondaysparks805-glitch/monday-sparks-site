@@ -296,6 +296,7 @@ i.must{background:var(--ink)}
 .tech-cta{margin-top:28px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;padding:18px clamp(16px,2vw,24px);background:var(--ink);color:var(--paper)}
 .tech-cta .btn:hover{background:var(--sky);color:var(--ink);border-color:var(--sky)}
 @media print{.top,footer,.tech-nav .btn,.tech-cta{display:none}}
+.ttable em.opt{display:block;font-style:normal;font-size:12px;color:#5b5d66;margin-top:2px}
 </style>
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -520,7 +521,8 @@ i.must{background:var(--ink)}
             <span class="label" data-en="Provided by the venue">Fourni par la salle</span>
             <h4 class="wide">Backline</h4>
             <ul class="check">
-              <li><b data-en="Full drum kit">Batterie complète</b><span data-en="Kick, snare, 3 toms, hi-hat stand, 2 cymbal boom stands, stool, rug">Grosse caisse, caisse claire, 3 toms, pied de charley, 2 pieds perche cymbale, tabouret, tapis</span></li>
+              <li><b data-en="Full drum kit">Batterie complète</b><span data-en="Kick, snare, 3 toms, stool, rug">Grosse caisse, caisse claire, 3 toms, tabouret, tapis</span></li>
+              <li><b data-en="Hardware: 5 stands">Hardware : 5 pieds</b><span data-en="1 hi-hat stand, 2 crash stands, 1 ride stand, 1 boom stand for a splash">1 pied de charley (hi-hat), 2 pieds de crash, 1 pied de ride, 1 pied perche pour une splash</span></li>
               <li><b data-en="1 bass amp">1 ampli basse</b><span data-en="Head + cab or combo, ≥ 300 W (Ampeg, Markbass, Orange type)">Tête + baffle ou combo, ≥ 300 W (type Ampeg, Markbass, Orange)</span></li>
               <li><b data-en="2 guitar amps">2 amplis guitare</b><span data-en="Fender Twin, Vox AC30, Marshall JCM type">Type Fender Twin, Vox AC30, Marshall JCM</span></li>
               <li><b data-en="3 boom mic stands">3 pieds de micro perche</b></li>
@@ -593,14 +595,14 @@ i.must{background:var(--ink)}
             <thead><tr><th>#</th><th>Source</th><th data-en="Suggested mic / DI">Micro / DI suggéré</th><th data-en="Stand">Pied</th><th data-en="Bar setup">Config bar</th></tr></thead>
             <tbody>
               <tr class="grp"><td colspan="5" data-en="Drums · Clément">Batterie · Clément</td></tr>
-              <tr><td class="n">1</td><td data-en="Kick">Grosse caisse</td><td>Beta 52 / e902 / D112</td><td data-en="Short">Petit</td><td class="c"><i class="must" title="indispensable"></i></td></tr>
-              <tr><td class="n">2</td><td data-en="Snare">Caisse claire</td><td>SM57</td><td data-en="Short">Petit</td><td class="c"><i class="want" title="souhaité"></i></td></tr>
-              <tr><td class="n">3</td><td data-en="Hi-hat">Charley</td><td data-en="Condenser (SM81 / C451)">Statique (SM81 / C451)</td><td data-en="Short">Petit</td><td class="c"></td></tr>
-              <tr><td class="n">4</td><td>Tom 1</td><td>e604 / Beta 98 (clip)</td><td>—</td><td class="c"></td></tr>
-              <tr><td class="n">5</td><td>Tom 2</td><td>e604 / Beta 98 (clip)</td><td>—</td><td class="c"></td></tr>
-              <tr><td class="n">6</td><td data-en="Floor tom">Tom basse</td><td>e604 / Beta 98 (clip)</td><td>—</td><td class="c"></td></tr>
-              <tr><td class="n">7</td><td data-en="Overhead house left">Overhead jardin</td><td data-en="Condenser">Statique</td><td data-en="Tall">Grand</td><td class="c"><i class="want" title="souhaité"></i></td></tr>
-              <tr><td class="n">8</td><td data-en="Overhead house right">Overhead cour</td><td data-en="Condenser">Statique</td><td data-en="Tall">Grand</td><td class="c"></td></tr>
+              <tr><td class="n">1</td><td><span data-en="Kick">Grosse caisse</span> <em class="opt" data-en="(optional, if available)">(optionnel, si à disposition)</em></td><td>Beta 52 / e902 / D112</td><td data-en="Short">Petit</td><td class="c"><i class="must" title="indispensable"></i></td></tr>
+              <tr><td class="n">2</td><td><span data-en="Snare">Caisse claire</span> <em class="opt" data-en="(optional, if available)">(optionnel, si à disposition)</em></td><td>SM57</td><td data-en="Short">Petit</td><td class="c"><i class="want" title="souhaité"></i></td></tr>
+              <tr><td class="n">3</td><td><span data-en="Hi-hat">Charley</span> <em class="opt" data-en="(optional, if available)">(optionnel, si à disposition)</em></td><td data-en="Condenser (SM81 / C451)">Statique (SM81 / C451)</td><td data-en="Short">Petit</td><td class="c"></td></tr>
+              <tr><td class="n">4</td><td>Tom 1 <em class="opt" data-en="(optional, if available)">(optionnel, si à disposition)</em></td><td>e604 / Beta 98 (clip)</td><td>—</td><td class="c"></td></tr>
+              <tr><td class="n">5</td><td>Tom 2 <em class="opt" data-en="(optional, if available)">(optionnel, si à disposition)</em></td><td>e604 / Beta 98 (clip)</td><td>—</td><td class="c"></td></tr>
+              <tr><td class="n">6</td><td><span data-en="Floor tom">Tom basse</span> <em class="opt" data-en="(optional, if available)">(optionnel, si à disposition)</em></td><td>e604 / Beta 98 (clip)</td><td>—</td><td class="c"></td></tr>
+              <tr><td class="n">7</td><td><span data-en="Overhead house left">Overhead jardin</span> <em class="opt" data-en="(optional, if available)">(optionnel, si à disposition)</em></td><td data-en="Condenser">Statique</td><td data-en="Tall">Grand</td><td class="c"><i class="want" title="souhaité"></i></td></tr>
+              <tr><td class="n">8</td><td><span data-en="Overhead house right">Overhead cour</span> <em class="opt" data-en="(optional, if available)">(optionnel, si à disposition)</em></td><td data-en="Condenser">Statique</td><td data-en="Tall">Grand</td><td class="c"></td></tr>
               <tr class="grp"><td colspan="5">Instruments</td></tr>
               <tr><td class="n">9</td><td><span data-en="Bass">Basse</span> <em class="who">Loïc</em></td><td data-en="Amp DI XLR out (or Beta 52 / RE20 on the cab)">Sortie DI XLR de l'ampli (ou Beta 52 / RE20 sur baffle)</td><td data-en="— / Short">— / Petit</td><td class="c"><i class="must" title="indispensable"></i></td></tr>
               <tr><td class="n">10</td><td><span data-en="Guitar 1">Guitare 1</span> <em class="who">Rémi</em></td><td data-en="SM57 / e906 on amp">SM57 / e906 sur ampli</td><td data-en="Short">Petit</td><td class="c"><i class="want" title="souhaité"></i></td></tr>
