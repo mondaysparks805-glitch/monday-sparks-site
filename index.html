@@ -194,14 +194,16 @@ p{margin:0}
 .lineup{background:var(--paper);color:var(--ink)}
 .lineup .sec-head p{color:#5b5d66}
 .members{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(24px,4vw,56px);align-items:stretch}
-.members-photo{position:relative;min-height:320px;overflow:hidden}
-.members-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.members-bio{display:grid;gap:16px;align-content:start;font-size:clamp(16px,1.3vw,19px);line-height:1.6}
+.members-bio p{margin:0;max-width:60ch}
+.members-bio strong{font-weight:700}
+.members-bio .members-influences{font-size:14px;color:#5b5d66;padding-top:14px;border-top:1px solid #26262633}
 .members ol{list-style:none;margin:0;padding:0;border-top:3px solid var(--ink)}
 .members li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:18px;align-items:center;padding-block:20px;border-bottom:1px solid #26262633}
 .members li i{width:18px;height:18px;border-radius:50%;display:block;border:2px solid var(--ink)}
 .members h3{font-size:clamp(24px,3.2vw,44px)}
 .members .label{color:#5b5d66;display:block;margin-top:6px}
-@media (max-width:860px){.members{grid-template-columns:1fr}.members-photo{min-height:240px}}
+@media (max-width:860px){.members{grid-template-columns:1fr}}
 
 /* ---------- contact ---------- */
 .contact .wrap{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:end}
@@ -362,7 +364,13 @@ footer .wrap{padding-block:18px;display:grid;gap:0}
         <p data-en="Two voices, two guitars, bass, drums and synths.">Deux voix, deux guitares, une basse, une batterie et des synthés.</p>
       </div>
       <div class="members">
-        <div class="members-photo"><img loading="lazy" src="img/studio2.jpg" alt="Prise de basse en studio, noir et blanc"></div>
+        <div class="members-bio">
+          <p data-en-html="&lt;strong&gt;Monday Sparks&lt;/strong&gt; is an &lt;strong&gt;alternative rock&lt;/strong&gt; band from the Paris area. It started out as a trio and is now a &lt;strong&gt;four-piece&lt;/strong&gt;."><strong>Monday Sparks</strong> est un groupe de <strong>rock alternatif</strong> issu de la région parisienne. D'abord lancé en trio, il forme aujourd'hui un <strong>quatuor</strong>.</p>
+          <p data-en-html="The band has released &lt;strong&gt;3 singles&lt;/strong&gt; in different styles, true to its DNA: &lt;strong&gt;exploring rock without setting any limits&lt;/strong&gt;.">Le groupe a sorti <strong>3 singles</strong> aux styles différents, à l'image de son ADN : <strong>naviguer dans le rock sans se fixer de limites</strong>.</p>
+          <p data-en-html="A regular on Paris stages, the band delivers an &lt;strong&gt;ultra high-energy set&lt;/strong&gt;, punctuated by laid-back moments with the crowd, with one goal: have as much fun as possible and &lt;strong&gt;leave a mark on the audience&lt;/strong&gt;.">Habitué des scènes parisiennes, il propose un <strong>set ultra énergique</strong>, ponctué d'échanges détendus avec le public, avec un objectif : prendre un maximum de plaisir et <strong>marquer les spectateurs</strong>.</p>
+          <p data-en-html="In short, the Monday Sparks adventure is only just beginning: the band plans to release &lt;strong&gt;3 new singles to kick off 2027&lt;/strong&gt;, along with plenty of other surprises you won&#x27;t want to miss.">Bref, l'aventure Monday Sparks ne fait que commencer : le groupe prévoit la sortie de <strong>3 nouveaux singles pour lancer 2027</strong>, mais aussi plein d'autres surprises à ne pas manquer.</p>
+          <p class="members-influences" data-en-html="&lt;strong&gt;Influences:&lt;/strong&gt; RATM, Deftones, RHCP, Radiohead… but a songwriting style all Monday Sparks&#x27; own."><strong>Inspirations :</strong> RATM, Deftones, RHCP, Radiohead… mais un style de composition propre à Monday Sparks.</p>
+        </div>
         <ol>
           <li><i style="background:var(--red)"></i><div><h3 class="wide">Loïc Catrice</h3><span class="label" data-en-html="Vocals &amp;amp; bass">Chant &amp; basse</span></div></li>
           <li><i style="background:var(--sky)"></i><div><h3 class="wide">Rémi Sicot</h3><span class="label" data-en="Guitar">Guitare</span></div></li>
