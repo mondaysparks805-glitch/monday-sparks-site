@@ -72,8 +72,9 @@ p{margin:0}
 /* ---------- ticker ---------- */
 .ticker{background:var(--yellow);color:var(--ink);overflow:hidden;border-block:2px solid var(--ink)}
 .ticker-track{display:flex;width:max-content;padding-block:12px}
-.ticker-track span{font-family:var(--f-disp);font-weight:400;font-size:clamp(18px,2.4vw,28px);text-transform:uppercase;white-space:nowrap;padding-right:28px;display:flex;align-items:center;gap:28px}
-.ticker-track span::after{content:"";width:.55em;height:.55em;border-radius:50%;background:var(--red);display:inline-block}
+.ticker-track span{font-family:var(--f-disp);font-weight:400;font-size:clamp(18px,2.4vw,28px);text-transform:uppercase;white-space:nowrap;padding-right:clamp(40px,5vw,72px)}
+.ticker-track span::before{content:"\201C"}
+.ticker-track span::after{content:"\201D"}
 @media (prefers-reduced-motion:no-preference){.ticker-track{animation:tick 48s linear infinite}@keyframes tick{to{transform:translateX(-50%)}}}
 
 /* ---------- bio ---------- */
